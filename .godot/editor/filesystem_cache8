@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1703123786
+::res://::1703126284
 README.md::TextFile::-1::1703123657::0::1::::<><>::
 ::res://assent/::1703123599
 BolaG1.png::CompressedTexture2D::9216706619503170425::1592970348::1703123599::1::::<><>::
@@ -24,3 +24,7 @@ gameover.wav::AudioStreamWAV::959231462156816335::1567708328::1703123599::1::::<
 Globo.png::CompressedTexture2D::1329384969578794697::1592968202::1703123598::1::::<><>::
 Pausa.wav::AudioStreamWAV::3523092973880942614::1599345014::1703123599::1::::<><>::
 SoJuego.ogg::AudioStreamOggVorbis::5914554511296142997::1585004428::1703123598::1::::<><>::
+::res://scenes/::1703125476
+Jugador.tscn::PackedScene::5679475525487839131::1703125476::0::1::::<><>::uid://s671nkxi0r0l::::res://assent/Globo.png<>res://scripts/Jugador.gd
+::res://scripts/::1703125476
+Jugador.gd::GDScript::-1::1703125476::0::1::::<>CharacterBody2D<>::
