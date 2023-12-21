@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm6geqy70xtw2"]
+
+[ext_resource type="Texture2D" uid="uid://s671nkxi0r0l" path="res://assent/Globo.png" id="1_cky27"]
+[ext_resource type="Script" path="res://scripts/Jugador.gd" id="1_kdvf8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ju5r7"]
+radius = 40.0
+height = 136.0
+
+[node name="Jugador" type="CharacterBody2D"]
+position = Vector2(15, 47)
+script = ExtResource("1_kdvf8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(274, 297)
+texture = ExtResource("1_cky27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(274, 297)
+shape = SubResource("CapsuleShape2D_ju5r7")
