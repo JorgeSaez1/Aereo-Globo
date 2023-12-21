@@ -3,6 +3,7 @@
 export.cfg
 export_presets.cfg
 .godot/
+.cfg
 
 # Imported translations (automatically generated from CSV files)
 *.translation
@@ -15,3 +16,7 @@ data_*/
 .godot/editor/project_metadata.cfg
 .godot/editor/Jugador.tscn-editstate-9b3064487d097865a190bb3b18b78030.cfg
 .godot/editor/script_editor_cache.cfg
+.godot/editor/editor_layout.cfg
+.godot/editor/Jugador.tscn-editstate-9b3064487d097865a190bb3b18b78030.cfg
+.godot/editor/Jugador.tscn-folding-9b3064487d097865a190bb3b18b78030.cfg
+*.cfg
