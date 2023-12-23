@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
-const Velocidad	 = 500
+const Velocidad	 = 150
 var Movimiento = Vector2()
 var Touch = false
-var Posicion 
+var Posicion
+var Longitud = 20 
 
 func _input(event):
 	if event is InputEventScreenTouch:
@@ -17,9 +18,29 @@ func _ready():
 func _physics_process(delta):
 	Movimiento = Vector2()
 	if Touch:
-		if global_position.x > Posicion.x:
-			Movimiento.x -=1
-		else:
-			Movimiento.x +=1
-	position += Movimiento
+		if abs(global_position.x - Posicion.x) > Longitud:
+			if global_position.x > Posicion.x:
+				Movimiento.x -=1
+			else:
+				Movimiento.x +=1
+				
+		if abs(global_position.y - Posicion.y) > Longitud:
+			if global_position.y > Posicion.y:
+				Movimiento.y -= 1
+			else:
+				Movimiento.y += 1
+				
+				
+		if Movimiento.length() > 0:
+			Movimiento = Movimiento.normalized() * Velocidad
+		position += Movimiento * delta
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	
