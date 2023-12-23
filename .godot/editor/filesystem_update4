@@ -1,1 +1,3 @@
 res://scenes/Enemigo.tscn
+res://scripts/Enemigo.gd
+res://scenes/Jugador.tscn
