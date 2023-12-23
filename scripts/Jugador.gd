@@ -1,10 +1,11 @@
-extends CharacterBody2D
+extends Area2D
 
 const Velocidad	 = 150
 var Movimiento = Vector2()
 var Touch = false
 var Posicion
-var Longitud = 20 
+var Longitud = 20
+signal choque 
 
 func _input(event):
 	if event is InputEventScreenTouch:
@@ -14,7 +15,7 @@ func _input(event):
 		else:
 			Touch = false
 func _ready():
-	pass
+	hide()
 func _physics_process(delta):
 	Movimiento = Vector2()
 	if Touch:
@@ -36,11 +37,16 @@ func _physics_process(delta):
 		position += Movimiento * delta
 		
 		
-		
-		
-		
-		
-		
-		
-		
+func _on_body_entered(body):
+	hide()
+	emit_signal("choque")
+	$CollisionShape2D.set_deferred("disable", true)
+	
+func inicio(posicion):
+	Posicion = posicion
+	show()
+	$CollisionShape2D.disabled = false
+	
+	
+	
 	
