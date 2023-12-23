@@ -1,12 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2u8obh20ypjd"]
+[gd_scene load_steps=8 format=3 uid="uid://d2u8obh20ypjd"]
 
 [ext_resource type="Texture2D" uid="uid://d4kv2ubb4urg0" path="res://assent/BolaG1.png" id="1_heus4"]
+[ext_resource type="Texture2D" uid="uid://cpfknhwdsj15h" path="res://assent/BolaG.png" id="1_tgfr7"]
+[ext_resource type="Texture2D" uid="uid://cdq5i4a0dagwa" path="res://assent/BolaG2.png" id="3_0xivb"]
+[ext_resource type="Texture2D" uid="uid://dv6xoi3pyapf2" path="res://assent/BolaP.png" id="4_k2k6u"]
+[ext_resource type="Texture2D" uid="uid://d3w6dqg4p3t83" path="res://assent/BolaP1.png" id="5_5marl"]
+[ext_resource type="Texture2D" uid="uid://dng1ddupmwy30" path="res://assent/BolaP2.png" id="6_ct3fq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ukp8t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tgfr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_heus4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0xivb")
+}],
+"loop": true,
+"name": &"BolaG",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_k2k6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5marl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ct3fq")
+}],
+"loop": true,
+"name": &"BolaP",
+"speed": 5.0
+}]
 
 [node name="Enemigo" type="RigidBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_heus4")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ukp8t")
+animation = &"BolaP"
