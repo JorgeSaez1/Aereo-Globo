@@ -1,11 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://b00mdprf8ahpk"]
+[gd_scene load_steps=7 format=3 uid="uid://b00mdprf8ahpk"]
 
+[ext_resource type="Script" path="res://scripts/Escena_principal.gd" id="1_jd71x"]
 [ext_resource type="Texture2D" uid="uid://drv0x2dw5wkvs" path="res://assent/Fondo.png" id="1_orvxv"]
 [ext_resource type="PackedScene" uid="uid://cm6geqy70xtw2" path="res://scenes/Jugador.tscn" id="2_4itsq"]
 [ext_resource type="AudioStream" uid="uid://nwwnw0vrt3ct" path="res://assent/gameover.wav" id="3_2l35m"]
 [ext_resource type="AudioStream" uid="uid://cqjb34cjm2b38" path="res://assent/SoJuego.ogg" id="4_wue13"]
 
+[sub_resource type="Curve2D" id="Curve2D_lnm87"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 596, 1, 0, 0, 0, 0, 600, 694, 0, 0, 0, 0, -2, 691, 0, 0, 0, 0, -9, -7, 0, 0, 0, 0, 0, -2)
+}
+point_count = 6
+
 [node name="Escena principal" type="Node"]
+script = ExtResource("1_jd71x")
 
 [node name="Fondo" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -13,15 +21,29 @@ offset_bottom = 40.0
 texture = ExtResource("1_orvxv")
 
 [node name="Jugador" parent="." instance=ExtResource("2_4itsq")]
+position = Vector2(300, 350)
 
 [node name="BolaTimer" type="Timer" parent="."]
+wait_time = 0.6
 
 [node name="ScoreTimer" type="Timer" parent="."]
 
 [node name="InicioTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
 
 [node name="AudioGame_Over" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_2l35m")
 
 [node name="AudioJugando" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_wue13")
+
+[node name="PosicionInicial" type="Marker2D" parent="."]
+position = Vector2(300, 350)
+
+[node name="BolaCamino" type="Path2D" parent="."]
+curve = SubResource("Curve2D_lnm87")
+
+[node name="BolaPosicion" type="PathFollow2D" parent="BolaCamino"]
+position = Vector2(0, -2)
+rotation = 0.00503351
