@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b00mdprf8ahpk"]
+[gd_scene load_steps=8 format=3 uid="uid://b00mdprf8ahpk"]
 
 [ext_resource type="Script" path="res://scripts/Escena_principal.gd" id="1_jd71x"]
 [ext_resource type="Texture2D" uid="uid://drv0x2dw5wkvs" path="res://assent/Fondo.png" id="1_orvxv"]
 [ext_resource type="PackedScene" uid="uid://cm6geqy70xtw2" path="res://scenes/Jugador.tscn" id="2_4itsq"]
+[ext_resource type="PackedScene" uid="uid://d2u8obh20ypjd" path="res://scenes/Enemigo.tscn" id="2_46lub"]
 [ext_resource type="AudioStream" uid="uid://nwwnw0vrt3ct" path="res://assent/gameover.wav" id="3_2l35m"]
 [ext_resource type="AudioStream" uid="uid://cqjb34cjm2b38" path="res://assent/SoJuego.ogg" id="4_wue13"]
 
@@ -14,6 +15,7 @@ point_count = 6
 
 [node name="Escena principal" type="Node"]
 script = ExtResource("1_jd71x")
+Bola = ExtResource("2_46lub")
 
 [node name="Fondo" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -47,3 +49,5 @@ curve = SubResource("Curve2D_lnm87")
 [node name="BolaPosicion" type="PathFollow2D" parent="BolaCamino"]
 position = Vector2(0, -2)
 rotation = 0.00503351
+
+[connection signal="choque" from="Jugador" to="." method="_on_jugador_choque"]
