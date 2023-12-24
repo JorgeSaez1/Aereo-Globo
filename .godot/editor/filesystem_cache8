@@ -23,9 +23,11 @@ FondoI.png::CompressedTexture2D::7318574888349264024::1592974294::1703123598::1:
 gameover.wav::AudioStreamWAV::959231462156816335::1567708328::1703123599::1::::<><>::
 Globo.png::CompressedTexture2D::1329384969578794697::1592968202::1703123598::1::::<><>::
 Pausa.wav::AudioStreamWAV::3523092973880942614::1599345014::1703123599::1::::<><>::
-SoJuego.ogg::AudioStreamOggVorbis::5914554511296142997::1585004428::1703123598::1::::<><>::
-::res://scenes/::1703368723
-Enemigo.tscn::PackedScene::9097677110861441761::1703368723::0::1::::<><>::
-Jugador.tscn::PackedScene::5679475525487839131::1703367993::0::1::::<><>::uid://s671nkxi0r0l::::res://assent/Globo.png<>res://scripts/Jugador.gd
-::res://scripts/::1703367980
-Jugador.gd::GDScript::-1::1703367980::0::1::::<>CharacterBody2D<>::
+SoJuego.ogg::AudioStreamOggVorbis::5914554511296142997::1585004428::1703380358::1::::<><>::
+::res://scenes/::1703380124
+Enemigo.tscn::PackedScene::9097677110861441761::1703371696::0::1::::<><>::uid://d4kv2ubb4urg0::::res://assent/BolaG1.png<>uid://cpfknhwdsj15h::::res://assent/BolaG.png<>res://scripts/Enemigo.gd<>uid://cdq5i4a0dagwa::::res://assent/BolaG2.png<>uid://dv6xoi3pyapf2::::res://assent/BolaP.png<>uid://d3w6dqg4p3t83::::res://assent/BolaP1.png<>uid://dng1ddupmwy30::::res://assent/BolaP2.png
+Jugador.tscn::PackedScene::5679475525487839131::1703372037::0::1::::<><>::uid://s671nkxi0r0l::::res://assent/Globo.png<>res://scripts/Jugador.gd
+Escena_principal.tscn::PackedScene::4193485994173529364::1703380124::0::1::::<><>::uid://drv0x2dw5wkvs::::res://assent/Fondo.png
+::res://scripts/::1703372037
+Jugador.gd::GDScript::-1::1703372037::0::1::::<>Area2D<>::
+Enemigo.gd::GDScript::-1::1703371021::0::1::::<>RigidBody2D<>::

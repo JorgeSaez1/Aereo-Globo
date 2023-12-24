@@ -1,3 +1,27 @@
-[gd_scene format=3 uid="uid://b00mdprf8ahpk"]
+[gd_scene load_steps=5 format=3 uid="uid://b00mdprf8ahpk"]
+
+[ext_resource type="Texture2D" uid="uid://drv0x2dw5wkvs" path="res://assent/Fondo.png" id="1_orvxv"]
+[ext_resource type="PackedScene" uid="uid://cm6geqy70xtw2" path="res://scenes/Jugador.tscn" id="2_4itsq"]
+[ext_resource type="AudioStream" uid="uid://nwwnw0vrt3ct" path="res://assent/gameover.wav" id="3_2l35m"]
+[ext_resource type="AudioStream" uid="uid://cqjb34cjm2b38" path="res://assent/SoJuego.ogg" id="4_wue13"]
 
 [node name="Escena principal" type="Node"]
+
+[node name="Fondo" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_orvxv")
+
+[node name="Jugador" parent="." instance=ExtResource("2_4itsq")]
+
+[node name="BolaTimer" type="Timer" parent="."]
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="InicioTimer" type="Timer" parent="."]
+
+[node name="AudioGame_Over" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_2l35m")
+
+[node name="AudioJugando" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wue13")
