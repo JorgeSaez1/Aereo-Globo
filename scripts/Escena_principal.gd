@@ -15,3 +15,7 @@ func nuevo_juego():
 	Score = 0
 	$InicioTimer.start()
 	$Jugador.inicio($PosicionInicial.Posicion)
+	
+func game_over():
+	$ScoreTimer.stop()
+	$BolaTimer.stop()
