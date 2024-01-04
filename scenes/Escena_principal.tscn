@@ -51,3 +51,6 @@ position = Vector2(0, -2)
 rotation = 0.00503351
 
 [connection signal="choque" from="Jugador" to="." method="_on_jugador_choque"]
+[connection signal="timeout" from="BolaTimer" to="." method="_on_bola_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="InicioTimer" to="." method="_on_inicio_timer_timeout"]
