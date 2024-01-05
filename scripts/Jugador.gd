@@ -37,7 +37,7 @@ func _physics_process(delta):
 		position += Movimiento * delta
 		
 		
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	hide()
 	emit_signal("choque")
 	$CollisionShape2D.set_deferred("disable", true)
