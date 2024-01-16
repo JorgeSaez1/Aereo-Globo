@@ -29,56 +29,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_mdniu")
 
-[node name="Mensaje" type="Label" parent="Fondo"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -138.5
-offset_top = -35.0
-offset_right = 138.5
-offset_bottom = 35.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = SubResource("FontVariation_u7m5d")
-theme_override_font_sizes/font_size = 32
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Score" type="Label" parent="Fondo"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_fonts/font = SubResource("FontVariation_sisg3")
-theme_override_font_sizes/font_size = 32
-
-[node name="Instrucciones" type="Label" parent="Fondo"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -135.0
-offset_top = -32.0
-offset_right = 154.0
-offset_bottom = 40.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = SubResource("FontVariation_4p51j")
-theme_override_font_sizes/font_size = 32
-text = "Dbe de esquivar todas las bolas rojas."
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="MensajeTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
@@ -102,3 +52,52 @@ texture_pressed = ExtResource("8_y2orj")
 position = Vector2(33, 584)
 texture_normal = ExtResource("9_mgswc")
 texture_pressed = ExtResource("10_x66yo")
+
+[node name="Mensaje" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.5
+offset_top = -35.0
+offset_right = 138.5
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_u7m5d")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 39.0
+grow_horizontal = 2
+theme_override_fonts/font = SubResource("FontVariation_sisg3")
+theme_override_font_sizes/font_size = 32
+
+[node name="Instrucciones" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.5
+offset_top = -32.0
+offset_right = 203.5
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_4p51j")
+theme_override_font_sizes/font_size = 32
+text = "Dbe de esquivar todas las bolas rojas."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="MensajeTimer" to="." method="_on_mensaje_timer_timeout"]

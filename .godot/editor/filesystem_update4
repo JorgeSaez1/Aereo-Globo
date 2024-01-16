@@ -3,3 +3,4 @@ res://scenes/Enemigo.tscn
 res://scenes/Escena_principal.tscn
 res://scripts/Escena_principal.gd
 res://scenes/interfaz.tscn
+res://scripts/Interfaz.gd
