@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b00mdprf8ahpk"]
+[gd_scene load_steps=8 format=3 uid="uid://b00mdprf8ahpk"]
 
 [ext_resource type="Script" path="res://scripts/Escena_principal.gd" id="1_jd71x"]
 [ext_resource type="Texture2D" uid="uid://drv0x2dw5wkvs" path="res://assent/Fondo.png" id="1_orvxv"]
 [ext_resource type="PackedScene" uid="uid://cm6geqy70xtw2" path="res://scenes/Jugador.tscn" id="2_4itsq"]
 [ext_resource type="AudioStream" uid="uid://nwwnw0vrt3ct" path="res://assent/gameover.wav" id="3_2l35m"]
 [ext_resource type="AudioStream" uid="uid://cqjb34cjm2b38" path="res://assent/SoJuego.ogg" id="4_wue13"]
+[ext_resource type="PackedScene" uid="uid://0jk0xdp7230t" path="res://scenes/interfaz.tscn" id="6_mt70j"]
 
 [sub_resource type="Curve2D" id="Curve2D_lnm87"]
 _data = {
@@ -48,7 +49,10 @@ curve = SubResource("Curve2D_lnm87")
 position = Vector2(0, -2)
 rotation = 0.00503351
 
+[node name="Interfaz" parent="." instance=ExtResource("6_mt70j")]
+
 [connection signal="choque" from="Jugador" to="." method="_on_jugador_choque"]
 [connection signal="timeout" from="BolaTimer" to="." method="_on_bola_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="timeout" from="InicioTimer" to="." method="_on_inicio_timer_timeout"]
+[connection signal="Nuevo_Juego" from="Interfaz" to="." method="nuevo_juego"]

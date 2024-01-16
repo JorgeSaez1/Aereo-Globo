@@ -5,7 +5,6 @@ var Score = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	nuevo_juego()
 	
 
 func _on_jugador_choque():
@@ -17,12 +16,14 @@ func nuevo_juego():
 	$InicioTimer.start()
 	$Jugador.inicio($PosicionInicial.position)
 	$AudioJugando.play()
+	$Interfaz.Score(Score)
 	
 func game_over():
 	$ScoreTimer.stop()
 	$BolaTimer.stop()
 	$AudioGame_Over.play()
 	$AudioJugando.stop()
+	$Interfaz.Game_Over()
 
 
 func _on_inicio_timer_timeout():
@@ -32,6 +33,7 @@ func _on_inicio_timer_timeout():
 
 func _on_score_timer_timeout():
 	Score += 1
+	$Interfaz.Score(Score)
 
 func _on_bola_timer_timeout():
 	$BolaCamino/BolaPosicion.set_progress(randi() )

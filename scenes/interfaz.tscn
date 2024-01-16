@@ -101,3 +101,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="timeout" from="MensajeTimer" to="." method="_on_mensaje_timer_timeout"]
+[connection signal="pressed" from="BotonPlay" to="." method="_on_boton_play_pressed"]
+[connection signal="pressed" from="BotonQuit" to="." method="_on_boton_quit_pressed"]
+[connection signal="pressed" from="BotonIns" to="." method="_on_boton_ins_pressed"]
+[connection signal="pressed" from="BotonVolver" to="." method="_on_boton_volver_pressed"]
