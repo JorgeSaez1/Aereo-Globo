@@ -6,6 +6,7 @@ var Score = 0
 func _ready():
 	randomize()
 	
+	
 
 func _on_jugador_choque():
 	$ScoreTimer.stop()
