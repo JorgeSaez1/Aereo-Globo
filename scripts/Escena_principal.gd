@@ -36,7 +36,7 @@ func _on_score_timer_timeout():
 func _on_bola_timer_timeout():
 	$BolaCamino/BolaPosicion.set_progress(randi() )
 	var B = Bola
-	add_child(B)
+	#add_child(B)
 	var d = $BolaCamino/BolaPosicion.rotation + PI / 2
 	B.position = $BolaCamino/BolaPosicion.position
 	d += randf_range(-PI/4,PI/4)

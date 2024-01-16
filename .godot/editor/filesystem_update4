@@ -1,6 +1,5 @@
-res://scenes/Escena_principal.tscn
-res://scripts/Escena_principal.gd
 res://scenes/Jugador.tscn
 res://scenes/Enemigo.tscn
-res://scripts/Jugador.gd
-res://scripts/Enemigo.gd
+res://scenes/Escena_principal.tscn
+res://scripts/Escena_principal.gd
+res://scenes/interfaz.tscn

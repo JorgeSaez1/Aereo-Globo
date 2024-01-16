@@ -1,0 +1,104 @@
+[gd_scene load_steps=15 format=3 uid="uid://0jk0xdp7230t"]
+
+[ext_resource type="Script" path="res://scripts/Interfaz.gd" id="1_dufc5"]
+[ext_resource type="Texture2D" uid="uid://dcjf4hgglrwno" path="res://assent/FondoI.png" id="1_mdniu"]
+[ext_resource type="FontFile" uid="uid://c1t63cjyauipx" path="res://assent/Dimbo Regular.ttf" id="2_3j7dt"]
+[ext_resource type="Texture2D" uid="uid://jmbeknrf5dxa" path="res://assent/BotonP.png" id="3_74fwe"]
+[ext_resource type="Texture2D" uid="uid://gp7ubklqblsk" path="res://assent/BotonPP.png" id="4_erjvf"]
+[ext_resource type="Texture2D" uid="uid://c5n1rx6245esb" path="res://assent/BotonS.png" id="5_18wrg"]
+[ext_resource type="Texture2D" uid="uid://dsm4uvd5udw1m" path="res://assent/BotonSP.png" id="6_ojena"]
+[ext_resource type="Texture2D" uid="uid://vh8tkn62k82t" path="res://assent/BotonI.png" id="7_qr37g"]
+[ext_resource type="Texture2D" uid="uid://wu0bqsi4mmsx" path="res://assent/BotonIP.png" id="8_y2orj"]
+[ext_resource type="Texture2D" uid="uid://d3tt0m3kcif6u" path="res://assent/BotonV.png" id="9_mgswc"]
+[ext_resource type="Texture2D" uid="uid://cv13ec8cicbx4" path="res://assent/BotonVP.png" id="10_x66yo"]
+
+[sub_resource type="FontVariation" id="FontVariation_u7m5d"]
+base_font = ExtResource("2_3j7dt")
+
+[sub_resource type="FontVariation" id="FontVariation_sisg3"]
+base_font = ExtResource("2_3j7dt")
+
+[sub_resource type="FontVariation" id="FontVariation_4p51j"]
+base_font = ExtResource("2_3j7dt")
+
+[node name="Interfaz" type="CanvasLayer"]
+script = ExtResource("1_dufc5")
+
+[node name="Fondo" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_mdniu")
+
+[node name="Mensaje" type="Label" parent="Fondo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.5
+offset_top = -35.0
+offset_right = 138.5
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_u7m5d")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="Fondo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = SubResource("FontVariation_sisg3")
+theme_override_font_sizes/font_size = 32
+
+[node name="Instrucciones" type="Label" parent="Fondo"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -32.0
+offset_right = 154.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_4p51j")
+theme_override_font_sizes/font_size = 32
+text = "Dbe de esquivar todas las bolas rojas."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MensajeTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="BotonPlay" type="TouchScreenButton" parent="."]
+position = Vector2(182, 179)
+texture_normal = ExtResource("3_74fwe")
+texture_pressed = ExtResource("4_erjvf")
+
+[node name="BotonQuit" type="TouchScreenButton" parent="."]
+position = Vector2(197, 316)
+texture_normal = ExtResource("5_18wrg")
+texture_pressed = ExtResource("6_ojena")
+
+[node name="BotonIns" type="TouchScreenButton" parent="."]
+position = Vector2(197, 444)
+texture_normal = ExtResource("7_qr37g")
+texture_pressed = ExtResource("8_y2orj")
+
+[node name="BotonVolver" type="TouchScreenButton" parent="."]
+position = Vector2(33, 584)
+texture_normal = ExtResource("9_mgswc")
+texture_pressed = ExtResource("10_x66yo")

@@ -16,7 +16,6 @@ point_count = 6
 script = ExtResource("1_jd71x")
 
 [node name="Fondo" type="TextureRect" parent="."]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_orvxv")
