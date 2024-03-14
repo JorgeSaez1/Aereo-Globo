@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705371927
+::res://::1710442079
 README.md::TextFile::-1::1704472898::0::1::::<><>::
 ::res://assent/::1704472898
 BolaG1.png::CompressedTexture2D::9216706619503170425::1704472898::1704472898::1::::<><>::
@@ -24,11 +24,13 @@ gameover.wav::AudioStreamWAV::959231462156816335::1704472898::1704472898::1::::<
 Globo.png::CompressedTexture2D::1329384969578794697::1704472898::1704472898::1::::<><>::
 Pausa.wav::AudioStreamWAV::3523092973880942614::1704472898::1704472898::1::::<><>::
 SoJuego.ogg::AudioStreamOggVorbis::5914554511296142997::1704472898::1704472898::1::::<><>::
-::res://scenes/::1704900854
-Enemigo.tscn::PackedScene::9097677110861441761::1704900853::0::1::::<><>::uid://d4kv2ubb4urg0::::res://assent/BolaG1.png<>uid://cpfknhwdsj15h::::res://assent/BolaG.png<>res://scripts/Enemigo.gd<>uid://cdq5i4a0dagwa::::res://assent/BolaG2.png<>uid://dv6xoi3pyapf2::::res://assent/BolaP.png<>uid://d3w6dqg4p3t83::::res://assent/BolaP1.png<>uid://dng1ddupmwy30::::res://assent/BolaP2.png
-Escena_principal.tscn::PackedScene::4193485994173529364::1704900854::0::1::::<><>::res://scripts/Escena_principal.gd<>uid://drv0x2dw5wkvs::::res://assent/Fondo.png<>uid://cm6geqy70xtw2::::res://scenes/Jugador.tscn<>uid://nwwnw0vrt3ct::::res://assent/gameover.wav<>uid://cqjb34cjm2b38::::res://assent/SoJuego.ogg
-Jugador.tscn::PackedScene::5679475525487839131::1704900853::0::1::::<><>::uid://s671nkxi0r0l::::res://assent/Globo.png<>res://scripts/Jugador.gd
-::res://scripts/::1704472898
+::res://scenes/::1710441822
+Enemigo.tscn::PackedScene::9097677110861441761::1710441648::0::1::::<><>::uid://d4kv2ubb4urg0::::res://assent/BolaG1.png<>uid://cpfknhwdsj15h::::res://assent/BolaG.png<>res://scripts/Enemigo.gd<>uid://cdq5i4a0dagwa::::res://assent/BolaG2.png<>uid://dv6xoi3pyapf2::::res://assent/BolaP.png<>uid://d3w6dqg4p3t83::::res://assent/BolaP1.png<>uid://dng1ddupmwy30::::res://assent/BolaP2.png
+Escena_principal.tscn::PackedScene::4193485994173529364::1710441822::0::1::::<><>::res://scripts/Escena_principal.gd<>uid://drv0x2dw5wkvs::::res://assent/Fondo.png<>uid://cm6geqy70xtw2::::res://scenes/Jugador.tscn<>uid://nwwnw0vrt3ct::::res://assent/gameover.wav<>uid://cqjb34cjm2b38::::res://assent/SoJuego.ogg<>uid://0jk0xdp7230t::::res://scenes/interfaz.tscn
+interfaz.tscn::PackedScene::1773953518909489741::1710441648::0::1::::<><>::res://scripts/Interfaz.gd<>uid://dcjf4hgglrwno::::res://assent/FondoI.png<>uid://c1t63cjyauipx::::res://assent/Dimbo Regular.ttf<>uid://jmbeknrf5dxa::::res://assent/BotonP.png<>uid://gp7ubklqblsk::::res://assent/BotonPP.png<>uid://c5n1rx6245esb::::res://assent/BotonS.png<>uid://dsm4uvd5udw1m::::res://assent/BotonSP.png<>uid://vh8tkn62k82t::::res://assent/BotonI.png<>uid://wu0bqsi4mmsx::::res://assent/BotonIP.png<>uid://d3tt0m3kcif6u::::res://assent/BotonV.png<>uid://cv13ec8cicbx4::::res://assent/BotonVP.png
+Jugador.tscn::PackedScene::5679475525487839131::1710441648::0::1::::<><>::uid://s671nkxi0r0l::::res://assent/Globo.png<>res://scripts/Jugador.gd
+::res://scripts/::1710441627
 Enemigo.gd::GDScript::-1::1704472898::0::1::::<>RigidBody2D<>::
-Escena_principal.gd::GDScript::-1::1704472898::0::1::::<>Node<>::
+Escena_principal.gd::GDScript::-1::1710441627::0::1::::<>Node<>::
+Interfaz.gd::GDScript::-1::1705381044::0::1::::<>CanvasLayer<>::
 Jugador.gd::GDScript::-1::1704472898::0::1::::<>Area2D<>::
